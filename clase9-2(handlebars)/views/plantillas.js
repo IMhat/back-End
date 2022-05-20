@@ -15,4 +15,8 @@ app.set('view engine', 'coder');
 
 app.get('/', (req, res) =>{
     res.render('index', {titulo:"titulo de mi pagina", nombre:"Mateo Mansilla"})
-})
+});
+
+app.listen(8080, () =>{
+    console.log('escuchando!');
+});

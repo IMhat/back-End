@@ -19,7 +19,7 @@ app.engine(
   })
 );
 
-//descubri que, si seteaba estos use, despues del app.use(router), el router no comprendia el json y el urlencoded. SI o SI antes de la asignacion del router
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/", express.static("public"));

@@ -1,6 +1,6 @@
 const express = require("express");
-const { productRouter } = require ("./routers/productRouter.js");
-const { cartRouter } = require (".routers/cartRouter");
+const { productRouter } = require ("./routers/product.js");
+const { cartRouter } = require (".routers/cart");
 const moment = require('moment');
 const path= require ('path');
 const { rawListeners } = require("process");
@@ -23,8 +23,6 @@ const port = process.env.PORT || 8080;
 app.listen(port, () => {
     console.log('server ON!')
 })
-
-
 
 
 

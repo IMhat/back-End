@@ -1,30 +1,29 @@
-const express = require('express');
 
+const express = require("express");
 const app = express();
 
-const port = 8080;
 
-//motor de plantillas
+const port = process.env.PORT || 8080;
 
-app.set('view engine', 'ejs');
-app.set('views', '/views');
+const { productRouter } = require("./routers/product.js");
+const { carritoRouter } = require("./routers/cart.js");
 
-app.use(express.static(__dirname + ("/public")));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
+app.use("/api/productos", productRouter);
+app.use("/api/carrito", carritoRouter);
 
-app.get('/', (req, res) =>{
-    res.render('index');
-
+const server = app.listen(port, () => {
+  console.log(`Servidor escuchando el puerto ${port}`);
 });
 
-app.use((req, res, next,) =>{
-    res.status(404).render("404");
+server.on("error", (error) => console.log(`Error en el servidor ${error}`));
 
-
-});
-
-
-app.listen(port, () =>{
-    console.log(`Escuchando el puerto ${port}`)
-
+// for invalid routes
+app.use(function (req, res) {
+  res.json({
+    error: "-2",
+    description: `route ${req.originalUrl} method ${req.method} not implemented`,
+  });
 });

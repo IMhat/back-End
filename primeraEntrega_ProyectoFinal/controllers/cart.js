@@ -13,16 +13,16 @@ class Carritos {
     let cart = new Carrito(fechaActual.format("DD/MM/YYYY HH:MM:SS"));
     const filedata = new FileData('./carrito.json');
     
-    //check if an empty array
+
     if (listadoCarritos.length == 0) {
       index = 1;
     } else {
-      //return ths last index and sum 1 to the new index object
+
       index = listadoCarritos[listadoCarritos.length - 1].id + 1;
     }
 
     cart.id = index;
-    //add product to products
+
     listadoCarritos.push(cart);
 
     filedata.save(cart, count);

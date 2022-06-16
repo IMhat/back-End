@@ -20,7 +20,7 @@ const server = app.listen(port, () => {
 
 server.on("error", (error) => console.log(`Error en el servidor ${error}`));
 
-// for invalid routes
+// error para rutas invalidas
 app.use(function (req, res) {
   res.json({
     error: "-2",

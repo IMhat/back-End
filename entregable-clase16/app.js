@@ -44,7 +44,7 @@ const optionsMariaDB = {
 };
 
 const optionsSqLite = {
-  filename: "./ecommerce/mydb.sqlite",
+  filename: "./ecommerce/base",
 };
 const client = "sqlite3";
 

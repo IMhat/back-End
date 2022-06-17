@@ -21,8 +21,8 @@ class MariaDB {
     //console.log('table products created');
     //console.log('insert data in table products');
     await knex("products").insert([
-      {title: "Coffee", price: 15.39, thumbnail: 'https://cdn2.iconfinder.com/data/icons/coffee-19/450/Coffee_bag-512.png'},
-      {title: "Tomato", price: 25.31, thumbnail: 'https://cdn3.iconfinder.com/data/icons/veggies/512/tomato.png'}      
+      {title: "Pizza", price: 50, thumbnail: 'https://picsum.photos/200/300'},
+      {title: "Pasta", price: 20, thumbnail: 'https://picsum.photos/200/300'}      
     ]);
     //console.log('data inserted');
   }

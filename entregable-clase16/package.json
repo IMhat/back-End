@@ -1,0 +1,24 @@
+{
+  "name": "entregable-clase16",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "knex": "^2.1.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.16",
+    "socket.io": "^4.5.1",
+    "soket.io": "^0.0.1-security",
+    "sqlite3": "^5.0.8"
+  }
+}
